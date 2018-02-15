@@ -1,0 +1,39 @@
+.article {
+    border: 3px solid #10283e;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.article-title {
+    padding: 1em;
+    background-color: #11283e;
+    display: inline-flex;
+    justify-content: space-between ;
+    width: 100%;
+}
+
+.article-title a, 
+.article-title div {
+    color: #FFF;
+}
+
+.article-title a:hover {
+    text-decoration: none;
+    color: #bebebe;
+}
+
+.article-body {
+    padding: 0.5em;
+}
+
+.article-body p {
+    margin: 0;
+}
+
+.article-save {
+    transition: all 0.5s;
+}
+.article-save:hover {
+    transform: scale(1.2) rotate(30deg);
+}
+    
