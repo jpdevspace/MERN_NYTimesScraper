@@ -8,7 +8,6 @@ class Search extends Component {
                     <div className="form-group">
                         <input className="form-control" type="search" placeholder="Search" aria-label="Search" /> 
                     </div>
-                    
                     <button className="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
