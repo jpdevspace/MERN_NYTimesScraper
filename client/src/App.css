@@ -1,7 +1,6 @@
 #big-wrapper {
     display: flex;
     flex-flow: row wrap;
-    height: 100vh;
 }
 
 header {
@@ -10,6 +9,7 @@ header {
 
 section {
     min-width: 450px;
+    max-width: 900px;
 } 
 
 @media (min-width: 768px) {

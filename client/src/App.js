@@ -3,7 +3,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 // Components
 import Sidebar from './Components/Sidebar';
-import Main from './Components/Main';
 import Saved from './Components/Saved';
 import Latest from './Components/Latest';
 import Results from './Components/Results';

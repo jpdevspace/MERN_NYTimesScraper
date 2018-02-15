@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Components
 import Search from './Search';
@@ -13,16 +14,16 @@ class Sidebar extends Component {
         <header>
         
             <nav className="navbar navbar-dark">
-                <a className="navbar-brand" href="#">
+                <NavLink className="navbar-brand" to="/">
                     <img id="nyt_logo" src={nytlogo} alt="NY Times Logo" />
-                </a>
+                </NavLink>
                 <Search />
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Saved Articles</a>
+                        <NavLink className="nav-link" to="/saved">Saved Articles</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Latest Articles</a>
+                        <NavLink className="nav-link" to="/latest">Latest Articles</NavLink>
                     </li>
                 </ul>
 
