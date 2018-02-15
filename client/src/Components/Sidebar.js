@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// Components
+import Search from './Search';
+
 // CSS
 import './Sidebar.css';
 import nytlogo from '../Assets/imgs/nyt_logo.png';
@@ -13,15 +16,7 @@ class Sidebar extends Component {
                 <a class="navbar-brand" href="#">
                     <img id="nyt_logo" src={nytlogo} alt="NY Times Logo" />
                 </a>
-                <div class="container">
-                    <form>
-                        <div class="form-group">
-                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" /> 
-                        </div>
-                        
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                </div>
+                <Search />
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Saved Articles</a>
