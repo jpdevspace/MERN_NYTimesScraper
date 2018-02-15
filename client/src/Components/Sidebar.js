@@ -10,19 +10,19 @@ import nytlogo from '../Assets/imgs/nyt_logo.png';
 class Sidebar extends Component {
   render() {
     return (
-        <header class="bg-dark">
+        <header>
         
-            <nav class="navbar navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">
+            <nav className="navbar navbar-dark">
+                <a className="navbar-brand" href="#">
                     <img id="nyt_logo" src={nytlogo} alt="NY Times Logo" />
                 </a>
                 <Search />
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Saved Articles</a>
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">Saved Articles</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Latest Articles</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">Latest Articles</a>
                     </li>
                 </ul>
 

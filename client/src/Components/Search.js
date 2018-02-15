@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 class Search extends Component {
     render() {
         return(
-            <div class="container">
+            <div className="container">
                 <form>
-                    <div class="form-group">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" /> 
+                    <div className="form-group">
+                        <input className="form-control" type="search" placeholder="Search" aria-label="Search" /> 
                     </div>
                     
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    <button className="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
         );

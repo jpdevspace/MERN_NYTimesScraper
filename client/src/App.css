@@ -1,0 +1,32 @@
+#big-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+}
+
+/* header {
+   width: 100%;
+}
+*/
+header {
+    width: 100%;
+}
+
+section {
+    min-width: 450px;
+} 
+
+@media (min-width: 768px) {
+  
+    header {
+      padding-top: 3em;
+      width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    header {
+      width: 400px;
+    }
+}
