@@ -2,6 +2,8 @@ const path = require('path');
 const express = require('express')
 const router = express.Router();
 const axios = require('axios');
+// Articles model used for MongoDB
+const Articles = require('../models/Articles');
 
 // Routes
 router.get('/latest', (req, res) => {
@@ -17,6 +19,12 @@ router.get('/latest', (req, res) => {
             res.send(nytRes);
         })
         .catch(error => console.log(error))
+});
+
+router.post('/save', (req, res) => {
+    Articles.create(req.body)
+        .then(articleDB => res.send(articleDB))
+        .catch(err => res.status(422).json(err))
 });
 
 module.exports = router;
