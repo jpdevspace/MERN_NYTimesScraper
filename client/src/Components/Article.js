@@ -17,22 +17,17 @@ class Article extends Component {
         id: this.props.id
     }
 
-    // handleSave = () => {
-    //     console.log("Saving!");
-    //     const article = {
-    //         url: this.state.url,
-    //         title: this.state.title,
-    //         abstract: this.state.abstract
-    //     }
+    handleSave = () => {
+        console.log("Saving!");
+        const article = {
+            url: this.state.url,
+            title: this.state.title,
+            abstract: this.state.abstract
+        }
 
-    //     API.saveArticle(article);
-    // }
-
-    handleRemove = () => {
-        console.log("Removing!");
-        const rmv = this.state.id;
-        API.removeArticle(rmv);
+        API.saveArticle(article);
     }
+
 
     render() {
         return (
@@ -44,7 +39,7 @@ class Article extends Component {
                     <div className="article-save" >
                         <Icon 
                             removeArticle={this.props.removeArticle}
-                            onRemove={this.handleRemove}
+                            saveArticle={this.handleSave}
                             type={this.state.type}/>
                     </div>
                 </div>

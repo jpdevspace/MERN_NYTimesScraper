@@ -6,7 +6,7 @@ const Icon = props => {
             {
                 props.type === 'save' 
                 ? 
-                    <span >
+                    <span onClick={props.saveArticle}>
                         <i className="far fa-save fa-2x"></i>
                     </span>
                 : 

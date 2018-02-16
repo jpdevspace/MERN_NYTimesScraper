@@ -6,10 +6,10 @@ import API from '../utils/API';
 
 
 class Saved extends Component {
-
+    // Set state with the docs from the Database
     state = { articles: [] };
 
-    
+    // Get all records from Database
     componentDidMount() {
         API.getSavedArticles()
             .then(response => this.setState({ articles: response.data }))
@@ -17,11 +17,12 @@ class Saved extends Component {
     }
 
     handleRemove = id => {
+        // Remove from DB
+        API.removeArticle(id);
+        // Remove from frontend (set new state)
         let newArticles = this.state.articles.filter(x => x._id !== id)
-        console.log(newArticles)
         this.setState({ articles: newArticles })
     }
-
 
     render() {
         let singleArticle = this.state.articles.map(item => {

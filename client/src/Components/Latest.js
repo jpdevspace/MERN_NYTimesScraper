@@ -6,25 +6,27 @@ import Article from './Article';
 import API from '../utils/API';
 
 class Latest extends Component {
-    state = {
-        articles: []
-    }
+    // Set state with articles from the NYTimes API
+    state = { articles: [] };
     
+    // Get the latest news from the NYTimes API
     componentDidMount() {
         API.getLatestNews()
             .then(response => this.setState({ articles: response.data }))
             .catch(err => console.log(err));
     }
-
+    
+    // Function to save articles into Database
     handleSave = () => {
+        console.log(this.state.articles);
         console.log("Saving!");
-        // const article = {
-        //     url: this.state.url,
-        //     title: this.state.title,
-        //     abstract: this.state.abstract
-        // }
-
-        // API.saveArticle(article);
+        const article = {
+            url: this.state.articles.url,
+            title: this.state.articles.title,
+            abstract: this.state.articles.abstract
+        }
+        console.log(article);
+        //API.saveArticle(article);
     }
 
     render() {
@@ -39,6 +41,7 @@ class Latest extends Component {
                                 title={item.title}
                                 abstract={item.abstract}
                                 url={item.url}
+                                saveArticle={this.handleSave}
                                 type="save"
                             />
                         )
