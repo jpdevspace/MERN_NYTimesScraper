@@ -5,10 +5,15 @@ MERN app powered by The New York Times API to get their latest news, search for 
 
 ## See it live on: 
 
+## Get the latest news from the New York Times API
 ![alt text][screenshot]
 
-[screenshot]: https://github.com/jpdevspace/MERN_NYTimesScraper/blob/master/src/imgs/screenshot.png "Screenshot of game"
+[screenshot]: https://github.com/jpdevspace/MERN_NYTimesScraper/blob/master//client/src/Assets/imgs/screenshot.png "Screenshot of app"
 
+## Save them and read them later
+![alt text][screenshot2]
+
+[screenshot2]: https://github.com/jpdevspace/MERN_NYTimesScraper/blob/master//client/src/Assets/imgs/screenshot2.png "Screenshot of app"
 
 ## Comments
 This app was created using the MERN Stack (MongoDB, ExpressJS, ReactJS and NodeJS) it uses The New York Times API to display the latest news, you can save whatever article you decide to view later or click the title to be redirected to the full article in The New York Times official website.
