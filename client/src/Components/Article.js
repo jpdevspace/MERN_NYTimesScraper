@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+
+// Components
+import Icon from './Icon';
 import API from '../utils/API';
-
-
 
 // CSS
 import './Article.css';
@@ -11,18 +12,26 @@ class Article extends Component {
     state = {
         url: this.props.url,
         title: this.props.title,
-        abstract: this.props.abstract
+        abstract: this.props.abstract,
+        type: this.props.type,
+        id: this.props.id
     }
 
-    handleSave = () => {
-        console.log("I'm Working");
-        const article = {
-            url: this.state.url,
-            title: this.state.title,
-            abstract: this.state.abstract
-        }
+    // handleSave = () => {
+    //     console.log("Saving!");
+    //     const article = {
+    //         url: this.state.url,
+    //         title: this.state.title,
+    //         abstract: this.state.abstract
+    //     }
 
-        API.saveArticle(article);
+    //     API.saveArticle(article);
+    // }
+
+    handleRemove = () => {
+        console.log("Removing!");
+        const rmv = this.state.id;
+        API.removeArticle(rmv);
     }
 
     render() {
@@ -32,8 +41,11 @@ class Article extends Component {
                     <a href={this.state.url} target="_blank">
                         <h6>{this.state.title}</h6>
                     </a>
-                    <div className="article-save" onClick={this.handleSave} >
-                        <i className="far fa-save fa-2x"></i>
+                    <div className="article-save" >
+                        <Icon 
+                            removeArticle={this.props.removeArticle}
+                            onRemove={this.handleRemove}
+                            type={this.state.type}/>
                     </div>
                 </div>
                 <div className="article-body">

@@ -16,6 +16,17 @@ class Latest extends Component {
             .catch(err => console.log(err));
     }
 
+    handleSave = () => {
+        console.log("Saving!");
+        // const article = {
+        //     url: this.state.url,
+        //     title: this.state.title,
+        //     abstract: this.state.abstract
+        // }
+
+        // API.saveArticle(article);
+    }
+
     render() {
         return (
             <section>
@@ -28,6 +39,7 @@ class Latest extends Component {
                                 title={item.title}
                                 abstract={item.abstract}
                                 url={item.url}
+                                type="save"
                             />
                         )
                     })}

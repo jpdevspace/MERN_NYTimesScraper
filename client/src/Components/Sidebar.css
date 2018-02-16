@@ -71,7 +71,7 @@ nav form button {
   }
 
   #nytDisclaimer {
-    position: absolute;
+    position: fixed;
     margin: 0;
     bottom: 0;
     font-size: 10px;

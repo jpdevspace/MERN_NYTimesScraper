@@ -6,7 +6,16 @@ export default {
         return axios.get('/latest')
     },
     // Save article
-    saveArticle: (article) => {
+    saveArticle: article => {
         return axios.post('/save', article)
+    },
+    // Retrieve all saved articles
+    getSavedArticles: () => {
+        return axios.get('/save')
+    },
+    // Remove article
+    removeArticle: id => {
+        return axios.delete(`/delete/${id}`)
     }
+
 }

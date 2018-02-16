@@ -18,10 +18,15 @@ ul {
     margin: 0;
 }
 
+#article-options:hover {
+    cursor: pointer;
+}
+
 @media (min-width: 768px) {
     header {
         padding-top: 3em;
         width: 300px;
+        min-height: 100vh;
     }
 
     section {

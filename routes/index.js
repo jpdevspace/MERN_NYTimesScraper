@@ -21,11 +21,27 @@ router.get('/latest', (req, res) => {
         .catch(error => console.log(error))
 });
 
+// Route to save articles in the MongoDB
 router.post('/save', (req, res) => {
     Articles.create(req.body)
-        .then(articleDB => res.send(articleDB))
+        .then(response => res.send(response))
         .catch(err => res.status(422).json(err))
 });
+
+// Route to display all saved articles from the MongoDB
+router.get('/save', (req, res) => {
+    Articles.find({})
+        .then(response => res.send(response))
+        .catch(err => res.status(422).json(err))
+})
+
+// Route to remove an article
+router.delete('/delete/:id', (req, res) => {
+    Articles.findById({ _id: req.params.id })
+        .then(response => response.remove())
+        .then(response => res.send(response))
+        .catch(err => res.status(422).json(err))
+})
 
 module.exports = router;
 
