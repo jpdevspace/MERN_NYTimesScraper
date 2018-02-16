@@ -15,37 +15,25 @@ class Latest extends Component {
             .then(response => this.setState({ articles: response.data }))
             .catch(err => console.log(err));
     }
-    
-    // Function to save articles into Database
-    handleSave = () => {
-        console.log(this.state.articles);
-        console.log("Saving!");
-        const article = {
-            url: this.state.articles.url,
-            title: this.state.articles.title,
-            abstract: this.state.articles.abstract
-        }
-        console.log(article);
-        //API.saveArticle(article);
-    }
 
     render() {
+        let articles = this.state.articles.map((item, i) => {
+            return (
+                <Article 
+                    key={i}
+                    title={item.title}
+                    abstract={item.abstract}
+                    url={item.url}
+                    type="save"
+                />
+            )
+        })
+
         return (
             <section>
                 <h1>Latest</h1>
                 <ul>
-                    {this.state.articles.map((item, i) => {
-                        return (
-                            <Article 
-                                key={i}
-                                title={item.title}
-                                abstract={item.abstract}
-                                url={item.url}
-                                saveArticle={this.handleSave}
-                                type="save"
-                            />
-                        )
-                    })}
+                    {articles}
                 </ul>
             </section>
         );

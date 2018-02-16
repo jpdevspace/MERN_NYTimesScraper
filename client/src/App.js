@@ -17,7 +17,7 @@ class App extends Component {
       <div id="big-wrapper">
         <Sidebar />
         <Route exact path="/" component={Latest} />
-        <Route exact path="/search" component={Results} />
+        <Route exact path="/results" component={Results} />
         <Route exact path="/saved" component={Saved} />
         <Route exact path="/latest" component={Latest} />
       </div>

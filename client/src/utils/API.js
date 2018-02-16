@@ -16,6 +16,11 @@ export default {
     // Remove article
     removeArticle: id => {
         return axios.delete(`/delete/${id}`)
+    },
+    // Search for a specific article
+    searchArticle: query => {
+        return axios.get(`/search/${query}`)
     }
+
 
 }

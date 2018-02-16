@@ -28,8 +28,9 @@ class Article extends Component {
         API.saveArticle(article);
     }
 
-
     render() {
+
+
         return (
             <li className="article">
                 <div className="article-title">
