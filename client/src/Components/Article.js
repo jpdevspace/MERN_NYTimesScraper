@@ -32,6 +32,7 @@ class Article extends Component {
 
 
         return (
+
             <li className="article">
                 <div className="article-title">
                     <a href={this.state.url} target="_blank">
@@ -48,6 +49,7 @@ class Article extends Component {
                     <p>{this.state.abstract}</p>
                 </div>
             </li>
+
         );
     }
 }

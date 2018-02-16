@@ -57,7 +57,12 @@ class Search extends Component {
                     {searchResults}
                 </ul>
                 <ul>
-                    {this.state.articles.map((item, i) => <li key={i}>{item.title}</li>)}
+                    {this.state.articles.length > 0
+                        ? 
+                            this.state.articles.map((item, i) => <li key={i}>{item.title}</li>)
+                        :
+                            <h3 className="text-center">No results to display yet</h3>
+                    }
                 </ul>
             </div>
         );

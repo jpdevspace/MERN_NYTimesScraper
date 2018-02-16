@@ -41,7 +41,7 @@ class Saved extends Component {
         return (
             <section>
                 <h1>Saved</h1>
-                <ul>{singleArticle}</ul>
+                {this.state.articles.length > 0 ? <ul>{singleArticle}</ul> : <h3 className="text-center">No articles saved yet</h3>}  
             </section>
         );
     }
